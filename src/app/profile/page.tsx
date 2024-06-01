@@ -1,9 +1,11 @@
+import React from "react";
 
-export default function Home() {
+const ProfilePage = () => {
   return (
-    <div>
-      <h1>Welcome to the Homepage</h1>
-      <p>Everyone can see this!</p>
+    <div className="profile">
+      <h1>Welcome to the ProfilePage</h1>
     </div>
   );
-}
+};
+
+export default ProfilePage;
