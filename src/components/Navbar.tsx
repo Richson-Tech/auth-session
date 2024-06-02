@@ -3,6 +3,7 @@ import React from 'react'
 import LogoutForm from './LogoutForm'
 
 const Navbar = () => {
+    const session = getSession 
   return (
       <nav>
         <Link href="/">HomePage</Link>
