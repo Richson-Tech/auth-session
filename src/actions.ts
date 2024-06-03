@@ -9,8 +9,8 @@ export const getSession = async () => {
     return session;
 }
 export const login = async () => {
-    "use server"
+  
 }
 export const logout = async () => {
-    "use server"
+  
 }
