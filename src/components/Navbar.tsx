@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 import LogoutForm from './LogoutForm'
+import { getSession } from '@/actions'
 
 const Navbar = async () => {
     const session = await getSession() 
