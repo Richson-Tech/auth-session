@@ -11,5 +11,7 @@ export const getSession = async () => {
 
   return session;
 };
-export const login = async () => {};
+export const login = async () => {
+    const session = await getSession()
+};
 export const logout = async () => {};
