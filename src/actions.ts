@@ -3,8 +3,8 @@ import { sessionOptions, SessionData, defaultSession } from "@/lib";
 import { getIronSession } from "iron-session";
 import { cookies } from "next/headers";
 
-let username = 'john'
-let isPro = true
+let username = "john";
+let isPro = true;
 
 export const getSession = async () => {
   const session = await getIronSession<SessionData>(cookies(), sessionOptions);
@@ -14,16 +14,16 @@ export const getSession = async () => {
 
   return session;
 };
-export const login = async (formData:FormData) => {
-    const session = await getSession()
-    const formUsername = formData.get("username") as string
-    const formPassword = formData.get("password") as string
+export const login = async (formData: FormData) => {
+  const session = await getSession();
+  const formUsername = formData.get("username") as string;
+  const formPassword = formData.get("password") as string;
 
-    // CHECK USER IN THE DB 
-    // const user  = await DiBackbone.getUser({username,password})
+  // CHECK USER IN THE DB
+  // const user  = await DiBackbone.getUser({username,password})
 
-    if (formUsername !== username) {
-        return{error: "Wrong Crenditials!"}
-    }
+  if (formUsername !== username) {
+    return { error: "Wrong Crenditials!" };
+  }
 };
 export const logout = async () => {};
