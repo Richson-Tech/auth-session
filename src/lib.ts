@@ -4,7 +4,12 @@ export interface SessionData {
   userId: string;
   userName?: string;
   img?: string;
-  isPro: boolean;
+    isPro: boolean;
+    isLogggedIn: boolean;
+}
+
+export const defaultSession: SessionData = {
+    isLogggedIn: false;
 }
 
 
