@@ -21,5 +21,9 @@ export const login = async (formData:FormData) => {
 
     // CHECK USER IN THE DB 
     // const user  = await DiBackbone.getUser({username,password})
+
+    if (formUsername !== username) {
+        return{error: "Wrong Crenditials!"}
+    }
 };
 export const logout = async () => {};
