@@ -13,6 +13,7 @@ export const getSession = async () => {
 };
 export const login = async (formData:FormData) => {
     const session = await getSession()
-    const formUsername = formData.get("username")
+    const formUsername = formData.get("username") as string
+    const formPassword = formData.get("password") as string
 };
 export const logout = async () => {};
