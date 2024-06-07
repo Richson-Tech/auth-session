@@ -25,10 +25,9 @@ export const login = async (formData: FormData) => {
   if (formUsername !== username) {
     return { error: "Wrong Crenditials!" };
   }
-    
-    session.userId = '1';
-    session.userName = formUsername;
-    session.isPro = isPro;
 
+  session.userId = "1";
+  session.userName = formUsername;
+  session.isPro = isPro;
 };
 export const logout = async () => {};
