@@ -27,7 +27,8 @@ export const login = async (formData: FormData) => {
   }
     
     session.userId = '1';
-    session.us
+    session.userName = formUsername;
+    session.isPro = isPro;
 
 };
 export const logout = async () => {};
