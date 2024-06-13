@@ -2,6 +2,7 @@
 import { sessionOptions, SessionData, defaultSession } from "@/lib";
 import { getIronSession } from "iron-session";
 import { cookies } from "next/headers";
+import { redirect } from "next/navigation";
 
 let username = "john";
 let isPro = true;
@@ -31,5 +32,6 @@ export const login = async (formData: FormData) => {
   session.isPro = isPro;
 
   await session.save()
+  redirect("/")
 };
 export const logout = async () => {};
