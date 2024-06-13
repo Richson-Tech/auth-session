@@ -29,5 +29,7 @@ export const login = async (formData: FormData) => {
   session.userId = "1";
   session.userName = formUsername;
   session.isPro = isPro;
+
+  await session.save()
 };
 export const logout = async () => {};
