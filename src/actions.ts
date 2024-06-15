@@ -32,6 +32,6 @@ export const login = async (formData: FormData) => {
   session.isPro = isPro;
 
   await session.save()
-  redirect("/")
+  redirect   ("/")
 };
 export const logout = async () => {};
