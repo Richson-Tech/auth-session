@@ -30,6 +30,7 @@ export const login = async (formData: FormData) => {
   session.userId = "1";
   session.userName = formUsername;
   session.isPro = isPro;
+  session.isLoggedIn = true;
 
   await session.save()
   redirect   ("/")
