@@ -32,10 +32,10 @@ export const login = async (formData: FormData) => {
   session.isPro = isPro;
   session.isLoggedIn = true;
 
-  await session.save()
-  redirect   ("/")
+  await session.save();
+  redirect("/");
 };
 export const logout = async () => {
-  const session = await getSession()
-  session.destroy()
+  const session = await getSession();
+  session.destroy();
 };
