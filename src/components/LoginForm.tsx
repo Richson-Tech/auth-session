@@ -4,9 +4,8 @@ import { login } from "@/actions";
 import React from "react";
 import { useFormState } from "react-dom";
 
-const [state, formAction] = useFormState<any, FormData>(login, undefined);
-
 const LoginForm = () => {
+  const [state, formAction] = useFormState<any, FormData>(login, undefined);
   return (
     <form action={formAction}>
       <input type="text" name="username" required placeholder="username" />
