@@ -1,5 +1,8 @@
 import { login } from "@/actions";
 import React from "react";
+import { useFormState } from "react-dom";
+
+const [state, formAction] = useFormState(login, undefined)
 
 const LoginForm = () => {
   return (

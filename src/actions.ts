@@ -15,7 +15,7 @@ export const getSession = async () => {
 
   return session;
 };
-export const login = async (formData: FormData) => {
+export const login = async (prevState:{error:undefined | string},formData: FormData) => {
   const session = await getSession();
   const formUsername = formData.get("username") as string;
   const formPassword = formData.get("password") as string;
