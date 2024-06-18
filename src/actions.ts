@@ -43,3 +43,11 @@ export const logout = async () => {
   session.destroy();
   redirect("/");
 };
+
+export const changePremium = async () => {
+  const session = await getSession();
+
+  isPro = !session.isPro;
+  session.isPro = isPro;
+  await session.save();
+};
