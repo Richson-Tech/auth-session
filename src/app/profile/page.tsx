@@ -13,10 +13,10 @@ const ProfilePage = async () => {
     <div className="profile">
       <h1>Welcome to the ProfilePage</h1>
       <p>
-        Welcome, <b> {session.userName}</b>
+        Welcome, <b> {session.userName}.</b>
       </p>
       <span>
-        You are a <b> {session.isPro ? "premium" : "Free"} </b>
+        You are a <b> {session.isPro ? "premium" : "Free"}</b> user
       </span>
     </div>
   );
