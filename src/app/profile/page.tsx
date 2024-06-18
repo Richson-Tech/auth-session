@@ -15,6 +15,9 @@ const ProfilePage = async () => {
       <p>
         Welcome, <b> {session.userName}</b>
       </p>
+      <span>
+        You are a <b> {session.isPro ? "premium" : "Free"} </b>
+      </span>
     </div>
   );
 };
