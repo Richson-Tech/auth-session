@@ -4,7 +4,7 @@ import { getIronSession } from "iron-session";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
-let username = "john";
+let username = "Gocrazy";
 let isPro = true;
 
 export const getSession = async () => {
