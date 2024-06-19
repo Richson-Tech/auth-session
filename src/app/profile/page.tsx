@@ -21,8 +21,13 @@ const ProfilePage = async () => {
       <form action={changePremium}>
         <button>{session.isPro ? "Cancel" : "Buy"} Premium</button>
       </form>
+
+      <form action="">
+        <input type="text" name="username" required placeholder={session.userName} />
+        <button>Update</button>
+      </form>
     </div>
   );
 };
-
+ 
 export default ProfilePage;
