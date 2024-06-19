@@ -1,4 +1,4 @@
-import { changePremium, getSession } from "@/actions";
+import { changePremium, changeUsername, getSession } from "@/actions";
 import { redirect } from "next/navigation";
 import React from "react";
 
@@ -22,12 +22,17 @@ const ProfilePage = async () => {
         <button>{session.isPro ? "Cancel" : "Buy"} Premium</button>
       </form>
 
-      <form action="">
-        <input type="text" name="username" required placeholder={session.userName} />
+      <form action={changeUsername}>
+        <input
+          type="text"
+          name="username"
+          required
+          placeholder={session.userName}
+        />
         <button>Update</button>
       </form>
     </div>
   );
 };
- 
+
 export default ProfilePage;
