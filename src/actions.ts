@@ -54,3 +54,16 @@ export const changePremium = async () => {
   // refreshes the page immedietly
   revalidatePath("/profile");
 };
+
+
+export const changeUsername = async (formData:FormData) => {
+  const session = await getSession();
+
+  const newUsername = formData.get("username") as string
+
+  isPro = !session.isPro;
+  session.isPro = isPro;
+  await session.save();
+  // refreshes the page immedietly
+  revalidatePath("/profile");
+};
