@@ -3,11 +3,10 @@ import { redirect } from "next/navigation";
 import React from "react";
 
 const PremiumPage = async () => {
-
-  const session = await getSession()
+  const session = await getSession();
 
   if (!session.isLoggedIn) {
-  redirect("/")
+    redirect("/");
   }
   return (
     <div className="premium">
