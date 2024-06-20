@@ -1,4 +1,5 @@
 import { getSession } from "@/actions";
+import Link from "next/link";
 import { redirect } from "next/navigation";
 import React from "react";
 
@@ -13,6 +14,9 @@ const PremiumPage = async () => {
     return (
       <div className="notPremium">
         <h1>Only premium users can see the content!</h1>
+        <Link href="/profile">
+          Go to the profile page to upgrade to premium
+        </Link>
       </div>
     );
   }
