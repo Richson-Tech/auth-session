@@ -15,8 +15,9 @@ export const getSession = async () => {
     session.isLoggedIn = defaultSession.isLoggedIn;
   }
 
-  // CHECK THE USER IN THE DB 
-  session.isBlocked = isBlocked
+  // CHECK THE USER IN THE DB
+  session.isBlocked = isBlocked;
+  session.isPro = isPro;
 
   return session;
 };
